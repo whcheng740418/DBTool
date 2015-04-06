@@ -86,8 +86,8 @@ public class MySQL {
             
             while(res.next()){
                 String[] str = new String[count];
-                for(int i=0;i<count;i++){
-                    str[i]=res.getString(i);
+                for(int i=1;i<=count;i++){
+                    str[i-1]=res.getString(i);
                 }
                 list.add(str);
             }
