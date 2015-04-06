@@ -50,7 +50,7 @@ public class MySQL {
 
     public void close(){
         try {
-            if(!conn.isClosed()) conn.close();
+            if(conn!=null&&!conn.isClosed()) conn.close();
         } catch (SQLException ex) {
             Logger.getLogger(MySQL.class.getName()).log(Level.SEVERE, null, ex);
         }
